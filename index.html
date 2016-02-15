@@ -150,7 +150,7 @@
     				<section>
     					<h3>Download links</h3>
 
-    					<p><a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
+    					<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
     					<p>Download the latest binarie in zip / tgz format</p>
     					<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
     				</section>
@@ -158,12 +158,34 @@
     					<h3>Exctract & execute</h3>
 
     					<h4>For Linux</h4>
-    					<pre><code data-trim data-noescape>
-    						✔ ~/Sandbox/jmeter-tutorial [master|✔] 
-    						11:38 $ firefox index.html 
-    						✔ ~/Sandbox/jmeter-tutorial [master|✚ 2…1] 
-    						11:44 $ 
+    					<pre><code data-trim>
+user : ~ > mkdir ~/Sandbox
+user : ~ > cp Downloads/apache-jmeter-*.tgz ~/Sandbox/
+user : ~ > cd Sandbox/
+user : ~/Sandbox > tar -xvf apache-jmeter-*.tgz
+user : ~/Sandbox > cd apache-jmeter-*/
+user : ~/Sandbox > chmod 755 ./bin/jmeter
+user : ~/Sandbox > ./bin/jmeter
     					</code></pre>
+    				</section>
+    				<section>
+    					<h3>Exctract & execute</h3>
+
+    					<h4>For Windows</h4>
+    					<ul>
+    						<li>Unzip the previously downloaded archive</li>
+    						<li>Go to bin/ directory</li>
+    						<li>Double-click on <code data-trim>"jmeter.bat"</code></li>
+    						<li>Done !</li>
+    					</ul>
+    				</section>
+    				<section>
+    					<h3>JMeter interface</h3>
+
+    					<img src="img/installOK.png"/>
+
+    					<small><p>Troubleshooting: see <a href="http://jmeter.apache.org/usermanual/get-started.html">http://jmeter.apache.org/usermanual/get-started.html</a></p></small>
+    					
     				</section>
     			</section>
     		</div>
