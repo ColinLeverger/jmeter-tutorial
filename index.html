@@ -65,8 +65,8 @@
     						<li><a href="#/why">1.</a> Why JMeter?</li>
     						<li><a href="#/funct">2.</a> JMeter functionalities</li>
     						<li><a href="#/install">3.</a> Installation & configuration</li>
-    						<li><a href="">4.</a> Case studies: primesui</li>
-    						<li><a href="">5.</a> Going further</li>
+    						<li><a href="#/case1">4.</a> Case studies: primesui</li>
+    						<li><a href="#/further">5.</a> Going further</li>
     					</ol> 
     				</section>
     				<section>
@@ -80,6 +80,13 @@
     						<li>LinkedIn: <a href="https://linkedin.com/in/colinleverger" target="blank">https://linkedin.com/in/colinleverger</a></li>
     						<li><a href="mailto:colinleverger@gmail.com" target="blank">Get in touch! :)</a></li>
     					</ul>  
+    				</section>  
+    			</section>
+
+    			<section>
+    				<section>
+    					<p>This is a relatively short tutorial to JMeter tool</p>
+    					<p>The aim is to give an overview of the tool - it will not cover everything</p>
     				</section>  
     			</section>
 
@@ -154,60 +161,91 @@
     					<ol>
     						<li>Have Java JVM > 1.6 on your machine</li>
     						<li>Have enough memory on your machine... (> 4 GB is better)
-    						<br><small>VUsers consume a lot of memory</small></li>
-    					</ol>
-    				</section>
-    				<section>
-    					<h3>Download links</h3>
+    							<br><small>VUsers consume a lot of memory</small></li>
+    						</ol>
+    					</section>
+    					<section>
+    						<h3>Download links</h3>
 
-    					<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
-    					<p>Download the latest binarie in zip / tgz format</p>
-    					<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
-    				</section>
-    				<section>
-    					<h3>Exctract & execute</h3>
+    						<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
+    						<p>Download the latest binarie in zip / tgz format</p>
+    						<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
+    					</section>
+    					<section>
+    						<h3>Exctract & execute</h3>
 
-    					<h4>For Linux</h4>
-    					<pre><code data-trim>
+    						<h4>For Linux</h4>
+    						<pre><code data-trim>
 user : ~ > mkdir ~/Sandbox
 user : ~ > cp Downloads/apache-jmeter-*.tgz ~/Sandbox/
 user : ~ > cd Sandbox/
 user : ~/Sandbox > tar -xvf apache-jmeter-*.tgz
 user : ~/Sandbox > cd apache-jmeter-*/
 user : ~/Sandbox > chmod 755 ./bin/jmeter
-user : ~/Sandbox > ./bin/jmeter
-    					</code></pre>
-    				</section>
-    				<section>
-    					<h3>Exctract & execute</h3>
+user : ~/Sandbox > ./bin/jmeter  #if you are using JMeter without proxy
+user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
+    						</code></pre>
+    					</section>
+    					<section>
+    						<h4>For Windows</h4>
+    						<ul>
+    							<li>Unzip the previously downloaded archive</li>
+    							<li>Go to bin/ directory</li>
+    							<li>Double-click on <code data-trim>"jmeter.bat"</code></li>
+    							<li>Done !</li>
+    						</ul>
 
-    					<h4>For Windows</h4>
-    					<ul>
-    						<li>Unzip the previously downloaded archive</li>
-    						<li>Go to bin/ directory</li>
-    						<li>Double-click on <code data-trim>"jmeter.bat"</code></li>
-    						<li>Done !</li>
-    					</ul>
-    				</section>
-    				<section>
-    					<h3>JMeter interface</h3>
+    						<p>If you are using a proxy:</p>
+    						<pre><code data-trim>
+./bin/jmeter.bat -H proxy-addr -P proxy-port
+    						</code></pre>
+    					</section>
+    					<section>
+    						<h3>JMeter interface</h3>
 
-    					<img src="img/installOK.png"/>
+    						<img src="img/installOK.png"/>
 
-    					<small><p>Troubleshooting: see <a href="http://jmeter.apache.org/usermanual/get-started.html">http://jmeter.apache.org/usermanual/get-started.html</a></p></small>
-    					
+    						<small>
+    							<p>Troubleshooting: see <a href="http://jmeter.apache.org/usermanual/get-started.html">http://jmeter.apache.org/usermanual/get-started.html</a></p>
+    							<p>Need more configuration ? see: <a href="http://jmeter.apache.org/usermanual/get-started.html#configuring_jmeter">here</a></p>
+    						</small>    					
+    					</section>
     				</section>
-    			</section>
+    				<section id="case1">
+    					<section>
+    						<h2>Case studies: primesui</h2>  
+    					</section>
+    					<section>
+    						<h3>About primesui</h3>
+    						<ul>
+    							<li>App to test various languages & implementations efficiency</li>
+    							<li>Playing with primes</li>
+    							<li>GitHub page: <a href="https://github.com/dacr/dock-primesui">here</a></li>
+    							<li>Dockerized environnement</li>
+    						</ul> 
+    						<p>Basically, we will hit an url with a certain number of VUsers to test the application</p>
+    						<p>We will use this app to run our first JMeter test</p>
+    					</section>  
+    					<section>
+    						<h3>Install primesui</h3>  
+    						<p>Follow <a href="https://github.com/dacr/dock-primesui">https://github.com/dacr/dock-primesui</a></p>
+    						<p>Hit the following: <pre><code>curl http://localhost:8888/primesui/check</code></pre></p>
+    						<p>It should give you back some html code, containing "** is the **th not prime"</p>
+    					</section>
+    					<section>
+
+    					</section>  
+    				</section>
+    			</div>
+
     		</div>
 
-    	</div>
+    		<script src="lib/js/head.min.js"></script>
+    		<script src="js/reveal.js"></script>
 
-    	<script src="lib/js/head.min.js"></script>
-    	<script src="js/reveal.js"></script>
+    		<script>
 
-    	<script>
-
-    		Reveal.initialize({
+    			Reveal.initialize({
 
         // Display controls in the bottom right corner
         controls: true,
