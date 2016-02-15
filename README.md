@@ -1,2 +1,2 @@
-# jmeter-tutorial
-J-Meter tutorial, using dcr/primesui app to test the tool.
+# JMeter-tutorial
+JMeter tutorial, using dcr/primesui app to test the tool.
