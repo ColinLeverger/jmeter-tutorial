@@ -69,20 +69,7 @@
     						<li><a href="#/further">5.</a> Going further</li>
     					</ol> 
     				</section>
-    				<section>
-    					<h2>About me</h2>
-    					<ul>
-    						<li>Colin LEVERGER</li>
-    						<li>Dev Scala, Java, Sys admin</li>
-    						<li>DevOps & Continuous Integration lover</li>
-    						<li>Web portfolio: <a href="http://colinleverger.fr" target="blank">http://colinleverger.fr</a></li>
-    						<li>Github: <a href="https://github.com/ColinLeverger" target="blank">https://github.com/ColinLeverger</a></li>
-    						<li>LinkedIn: <a href="https://linkedin.com/in/colinleverger" target="blank">https://linkedin.com/in/colinleverger</a></li>
-    						<li><a href="mailto:colinleverger@gmail.com" target="blank">Get in touch! :)</a></li>
-    					</ul>  
-    				</section>  
     			</section>
-
     			<section>
     				<section>
     					<p>This is a relatively short tutorial to JMeter tool</p>
@@ -225,7 +212,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     			</section>
     			<section>
     				<section>
-    					<h2>Setup PrimesUI</h2>  
+    					<h2>Step 1. Setup PrimesUI</h2>  
     				</section>
     				<section>
     					<h3>About PrimesUI</h3>
@@ -253,12 +240,12 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>  
     			</section>
     			<section>
-    				<section id="step1">
-    					<h2>Step 1: Configure the JMeter recorder</h2>  
+    				<section id="step2">
+    					<h2>Step 2: Configure the JMeter recorder</h2>  
     				</section>
     				<section>
     					<h3>Principle</h3>
-    					<p>You will now set up a proxy with JMeter and this proxy will record any action you have on PrimesUI:</p>
+    					<p>You will now setup a proxy with JMeter and this proxy will record any action you have on PrimesUI:</p>
     					<ul>
     						<li>Click on a link</li>
     						<li>Reload the page</li>
@@ -305,13 +292,13 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>
     			</section>
     			<section>
-    				<section id="step2">
-    					<h2>Step 2: Configure the web browser</h2>  
+    				<section>
+    					<h2>Step 3: Configure the web browser</h2>  
     				</section>
     				<section>
     					<h3>Principle</h3>
     					<ul>
-    						<li>You will now set up your browser to make it communicate with webapges through your JMeter proxy previously set</li>
+    						<li>You will now setup your browser to make it communicate with webapges through your JMeter proxy previously set</li>
     						<li>You will be able afterward to play & record your test scenario</li>
     						<li>Browser used for this part: Firefox</li>
     					</ul>
@@ -320,7 +307,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<h3>Let's get started!</h3>
     					<ul>
     						<li>First, open Firefox and go to "Preference/Advanced/Network"</li>
-    						<li>On the section "Connection", click on "Settings" and set up your proxy (see below)</li>
+    						<li>On the section "Connection", click on "Settings" and setup your proxy (see below)</li>
     					</ul>
     				</section>  
     				<section>
@@ -346,14 +333,14 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				<section>
     					<ul>
     						<li>When you have finished to play with the app, return to JMeter and click on the "Stop" button on the recorder</li>
-    						<li>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration / return to step <a href="#/step1">1</a>)</li>
+    						<li>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration / return to step <a href="#/step2">2</a>)</li>
     					</ul>
     					<img src="img/httprequests.png">
     				</section>
     			</section>
 				<section>
-    				<section id="step3">
-    					<h2>Step 3: Replay your recorded test</h2>  
+    				<section>
+    					<h2>Step 4: Replay your recorded test</h2>  
     				</section>
     				<section>
     					<h3>Principle</h3>
@@ -386,15 +373,16 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<p>See screenshot below</p>    					
     				</section>
     				<section>
-    					<h4>Listeners output</h4>
+    					<h4>Listeners output 1</h4>
     					<img src="img/listener1.png">			
     				</section>
     				<section>
+                        <h4>Listeners output 2</h4>
     					<img src="img/listener2.png">    	
     				</section>
     			</section>
     			<section>
-    				<section id="step3">
+    				<section>
     					<h2>Build test without recorder</h2>  
     				</section>
     				<section>
@@ -442,6 +430,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>
     				<section>
     					<h3>Run your test and analyse output!</h4>
+                        <p>In this configuration, each VUsers will basically hit /primesui/check a hundread times!</p>
     				</section>
     				<section>
     					<h3>Notes</h3>
@@ -463,13 +452,25 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     			<section>
     				<section>
     					<h2>The end</h2>  
-    					<p>I hope you find this tutorial useful!</p>
+    					<p>I hope you'll find this tutorial useful!</p>
     					<p><a href="#">#TOP</a></p>
     				</section>
     				<section>
     					<p><a href="mailto:colinleverger@gmail.com" target="blank">Any feedback?</a></p>
     					<p><a href="#">#TOP</a></p>
     				</section>
+                    <section>
+                        <h2>About me</h2>
+                        <ul>
+                            <li>Colin LEVERGER</li>
+                            <li>Dev Scala, Java, Sys admin</li>
+                            <li>DevOps & Continuous Integration lover</li>
+                            <li>Web portfolio: <a href="http://colinleverger.fr" target="blank">http://colinleverger.fr</a></li>
+                            <li>Github: <a href="https://github.com/ColinLeverger" target="blank">https://github.com/ColinLeverger</a></li>
+                            <li>LinkedIn: <a href="https://linkedin.com/in/colinleverger" target="blank">https://linkedin.com/in/colinleverger</a></li>
+                            <li><a href="mailto:colinleverger@gmail.com" target="blank">Get in touch! :)</a></li>
+                        </ul>  
+                    </section>  
     			</section>
     		</div>
 
