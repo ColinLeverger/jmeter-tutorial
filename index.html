@@ -268,21 +268,27 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<img src="img/threadgroup.png">
     				</section>  
     				<section>
-    					<p>Right click to the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</p>
-    					<p>Put the following "http://127.0.0.1:8888/primesui/" on the field "Server Name or IP"</p>
+    					<ul>
+    						<li>Right click to the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</li>
+    						<li>Put the following "http://127.0.0.1:8888/primesui/" on the field "Server Name or IP"</li>
+    					</ul>
     					<img src="img/httpdefault.png">
     				</section>  
     				<section>
-    					<p>Right click to "Thread Group" and "Add/Logic Controller/Recording Controller"</p>
-    					<img src="img/recordingcontroller.png">
-    					<p>We have now the minimum requirements to record our actions on the stubb website</p>
+    					<ul>
+    						<li>Right click to "Thread Group" and "Add/Logic Controller/Recording Controller"</li>
+    						<img src="img/recordingcontroller.png">
+    						<li>We have now the minimum requirements to record our actions on the stubb website</li>
+    					</ul>
     				</section>  
     				<section>
-    					<p>Then, right click to "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</p>
-    					<p>Configure the port of your proxy (I have chosen 7777 in this case)</p>
-    					<p>Configure the Targt Controller (Test Plan > Thread Group > Recording Controller)</p>
-    					<p>Click on "Add  suggested Excludes"</p>
-    					<p>See screenshot below</p>
+    					<ul>
+    						<li>Then, right click to "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</li>
+    						<li>Configure the port of your proxy (I have chosen 7777 in this case)</li>
+    						<li>Configure the Targt Controller (Test Plan > Thread Group > Recording Controller)</li>
+    						<li>Click on "Add  suggested Excludes"</li>
+    					</ul>
+						<p>See screenshot below</p>
     				</section>  
     				<section>
     					<img src="img/scriptrecorder.png">
@@ -297,21 +303,27 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>
     				<section>
     					<h3>Principle</h3>
-    					<p>You will now set up your browser to make it communicate with webapges through your JMeter proxy previously set</p>
-    					<p>You will be able afterward to play & record your test scenario</p>
-    					<p>I'll explain this part using Firefox</p>
+    					<ul>
+    						<li>You will now set up your browser to make it communicate with webapges through your JMeter proxy previously set</li>
+    						<li>You will be able afterward to play & record your test scenario</li>
+    						<li>Browser used for this part: Firefox</li>
+    					</ul>
     				</section>  
     				<section>
     					<h3>Let's get started!</h3>
-    					<p>First, open Firefox and go to "Preference/Advanced/Network"</p>
-    					<p>On the section "Connection", click on "Settings" and set up your proxy (see below)</p>
+    					<ul>
+    						<li>First, open Firefox and go to "Preference/Advanced/Network"</li>
+    						<li>On the section "Connection", click on "Settings" and set up your proxy (see below)</li>
+    					</ul>
     				</section>  
     				<section>
     					<img src="img/firefoxconf1.png">
     				</section>  
     				<section>
-    					<p>To install the JMeter certificate in Firefox, go to "Preference/Advanced/Certificates", "View certificates" and "Import"</p>
-    					<p><u>Tip</u>: the JMeters's self-signed certificates is in <code>%JMETER_HOME%/bin/</code></p>
+    					<ul>
+    						<li>To install the JMeter certificate in Firefox, go to "Preference/Advanced/Certificates", "View certificates" and "Import"</li>
+    						<li><u>Tip</u>: the JMeters's self-signed certificates is in <code>%JMETER_HOME%/bin/</code></li>
+    					</ul>
     				</section>      				
     				<section>
     					<img src="img/firefoxconf2.png">
@@ -323,9 +335,19 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<p>Good news everyone, your browser is now ready! Simply hit "http://127.0.0.1:8888/primesui/", browse the page, hit several times "http://127.0.0.1:8888/primesui/check", have some fun with urls...</p>
     				</section>  
     				<section>
-    					<p>When you have finished to play with the app, return to JMeter and click on the "Stop" button on the recorder</p>
-    					<p>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration and return to step <a href="#/step1">1</a>)</p>
+    					<ul>
+    						<li>When you have finished to play with the app, return to JMeter and click on the "Stop" button on the recorder</li>
+    						<li>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration / return to step <a href="#/step1">1</a>)</li>
+    					</ul>
     					<img src="img/httprequests.png">
+    				</section>
+    			</section>
+				<section>
+    				<section id="step3">
+    					<h2>Step 3: Replay your recorded test</h2>  
+    				</section>
+    				<section>
+    					WORK IN PROGRESS
     				</section>
     			</section>
     		</div>
