@@ -45,7 +45,7 @@
     			<section>
     				<h1>JMeter</h1>
     				<h3 style="color: #222;">An Opensource Load Testing tool</h3>
-    				<a href="http://jmeter.apache.org/" target="blank">Link to JMeter official site</a>
+    				<a href="http://jmeter.apache.org/" target="blank">JMeter</a>
     				<p><a href="http://colinleverger.fr" target="blank">Colin Leverger</a></p>
 
     				<p>
@@ -59,19 +59,19 @@
     			</section>
 
     			<section>
-    				<section>
+    				<section id="sum">
     					<h2>Summary</h2>  
     					<ol style="list-style-type:none"><li>
     						<li><a href="#/why">1.</a> Why JMeter?</li>
     						<li><a href="#/funct">2.</a> JMeter functionalities</li>
     						<li><a href="#/install">3.</a> Installation & configuration</li>
-    						<li><a href="#/case1">4.</a> Case studies: primesui</li>
+    						<li><a href="#/case1">4.</a> Case studies: PrimesUI</li>
     						<li><a href="#/further">5.</a> Going further</li>
     					</ol> 
     				</section>
     				<section>
     					<h2>About me</h2>
-                        <ul>
+    					<ul>
     						<li>Colin LEVERGER</li>
     						<li>Dev Scala, Java, Sys admin</li>
     						<li>DevOps & Continuous Integration lover</li>
@@ -85,14 +85,15 @@
 
     			<section>
     				<section>
-    					<p>This is a relatively short tutorial to JMeter tool.</p>
-    					<p>The aim is to give an overview of the tool - it will not cover everything.</p>
+    					<p>This is a relatively short tutorial to JMeter tool</p>
+    					<p>The aim is to give an overview of the tool - it will not cover everything</p>
+    					<p>We will focuse here on using the GUI, it is still possible to use CLI only</p>
     				</section>  
     			</section>
 
     			<section id="why">
     				<section>
-    					<h2>Why JMeter?</h2>
+    					<h2><a href="#/sum">1.</a> Why JMeter?</h2>
     				</section>
     				<section>
     					<h3>Pros</h3>
@@ -117,7 +118,7 @@
     			</section>
     			<section id="funct">
     				<section>
-    					<h2>JMeter functionalities</h2>
+    					<h2><a href="#/sum">2.</a> JMeter functionalities</h2>
     				</section>
 
     				<section>
@@ -154,27 +155,32 @@
     			</section>
     			<section id="install">
     				<section>
-    					<h2>Installation & configuration</h2>
+    					<h2><a href="#/sum">3.</a> Installation & configuration</h2>
     				</section>
     				<section>
     					<h3>Before reading further, you should:</h3>
-    					<ol>
+    					
+    					<ul>
+    						<h4>For JMeter install itself:</h4>
     						<li>Have Java JVM > 1.6 on your machine</li>
-    						<li>Have enough memory on your machine... (> 4 GB is better)<br><small>VUsers consume a lot of memory</small></li>
-    					</ol>
-    					</section>
-    					<section>
-    						<h3>Download links</h3>
+    						<li>Have enough memory on your machine... (> 4 GB is better)</li><br>
+    						<h4>To test JMeter, we will need:</h4>
+    						<li>Docker installed & ready (see: <a href="http://www.docker.com">Docker</a>)</li>
+    						<li>Git</li>
+    					</ul>
+    				</section>
+    				<section>
+    					<h3>Download links</h3>
 
-    						<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">http://jmeter.apache.org/download_jmeter.cgi</a></p>
-    						<p>Download the latest binarie in zip / tgz format</p>
-    						<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
-    					</section>
-    					<section>
-    						<h3>Exctract & execute</h3>
+    					<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">jmeter.apache.org/download_jmeter.cgi</a></p>
+    					<p>Download the latest binarie in zip / tgz format</p>
+    					<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
+    				</section>
+    				<section>
+    					<h3>Exctract & execute</h3>
 
-    						<h4>For Linux</h4>
-    						<pre><code data-trim>
+    					<h4>For Linux</h4>
+    					<pre><code data-trim>
 user : ~ > mkdir ~/Sandbox
 user : ~ > cp Downloads/apache-jmeter-*.tgz ~/Sandbox/
 user : ~ > cd Sandbox/
@@ -183,68 +189,155 @@ user : ~/Sandbox > cd apache-jmeter-*/
 user : ~/Sandbox > chmod 755 ./bin/jmeter
 user : ~/Sandbox > ./bin/jmeter  #if you are using JMeter without proxy
 user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
-    						</code></pre>
-    					</section>
-    					<section>
-    						<h4>For Windows</h4>
-    						<ul>
-    							<li>Unzip the previously downloaded archive</li>
-    							<li>Go to bin/ directory</li>
-    							<li>Double-click on <code data-trim>"jmeter.bat"</code></li>
-    							<li>Done !</li>
-    						</ul>
-
-    						<p>If you are using a proxy:</p>
-    						<pre><code data-trim>
-./bin/jmeter.bat -H proxy-addr -P proxy-port
-    						</code></pre>
-    					</section>
-    					<section>
-    						<h3>JMeter interface</h3>
-
-    						<img src="img/installOK.png"/>
-
-    						<small>
-    							<p>Troubleshooting: see <a href="http://jmeter.apache.org/usermanual/get-started.html">http://jmeter.apache.org/usermanual/get-started.html</a></p>
-    							<p>Need more configuration ? see: <a href="http://jmeter.apache.org/usermanual/get-started.html#configuring_jmeter">here</a></p>
-    						</small>    					
-    					</section>
+    					</code></pre>
+    					<small><p><u>Note</u>: if your proxy is localhost, just use <code>-H localhost</code> (http://127.0.0.1 & http://localhost wont actually work...)</p></small>
     				</section>
-    				<section id="case1">
-    					<section>
-    						<h2>Case studies: primesui</h2>  
-    					</section>
-    					<section>
-    						<h3>About primesui</h3>
-    						<ul>
-    							<li>App to test various languages & implementations efficiency</li>
-    							<li>Playing with primes</li>
-    							<li>GitHub page: <a href="https://github.com/dacr/dock-primesui">here</a></li>
-    							<li>Dockerized environnement</li>
-    						</ul> 
-    						<p>Basically, we will hit an url with a certain number of VUsers to test the application</p>
-    						<p>We will use this app to run our first JMeter test</p>
-    					</section>  
-    					<section>
-    						<h3>Install primesui</h3>  
-    						<p>Follow <a href="https://github.com/dacr/dock-primesui">https://github.com/dacr/dock-primesui</a></p>
-    						<p>Hit the following: <pre><code>curl http://localhost:8888/primesui/check</code></pre></p>
-    						<p>It should give you back some html code, containing "** is the **th not prime"</p>
-    					</section>
-    					<section>
+    				<section>
+    					<h4>For Windows</h4>
+    					<ul>
+    						<li>Unzip the previously downloaded archive</li>
+    						<li>Go to bin/ directory</li>
+    						<li>Double-click on <code data-trim>"jmeter.bat"</code></li>
+    						<li>Done !</li>
+    					</ul>
 
-    					</section>  
+    					<p>If you are using a proxy:</p>
+    					<pre><code data-trim>jmeter.bat -H proxy-addr -P proxy-port</code></pre>
     				</section>
-    			</div>
+    				<section>
+    					<h3>JMeter interface</h3>
 
+    					<img src="img/installOK.png"/>
+
+    					<small>
+    						<p><u>Troubleshooting</u>: see <a href="http://jmeter.apache.org/usermanual/get-started.html">jmeter.apache.org/usermanual/get-started.html</a></p>
+    						<p><u>Need more configuration ? See</u>: <a href="http://jmeter.apache.org/usermanual/get-started.html#configuring_jmeter">configuration details</a></p>
+    					</small>    					
+    				</section>
+    			</section>
+    			<section id="case1">
+    				<h2><a href="#/sum">4.</a> Case studies: PrimesUI</h2>  
+    			</section>
+    			<section>
+    				<section>
+    					<h2>Setup PrimesUI</h2>  
+    				</section>
+    				<section>
+    					<h3>About PrimesUI</h3>
+    					<ul>
+    						<li>App to test various languages & implementations efficiency</li>
+    						<li>Playing with primes</li>
+    						<li>GitHub page: <a href="https://github.com/dacr/dock-primesui">here</a></li>
+    						<li>Dockerized environnement</li>
+    					</ul> 
+    					<p>Basically, we will hit an url with a certain number of VUsers to test the application</p>
+    					<p>We will use this app to run our first JMeter test</p>
+    				</section>  
+    				<section>
+    					<h3>Install PrimesUI</h3>  
+    					<ul>
+    						<li>Follow <a href="https://github.com/dacr/dock-primesui">github.com/dacr/dock-primesui</a></li>
+    						<li>Run the following: <pre><code>curl http://localhost:8888/primesui/check</code></pre></li>
+    						<li>This command should give you back some html code if primesui is ready</li>
+    						<li>If you hit <code>http://127.0.0.1:8888/primesui/</code> with your favorite browser, you should see the following webpage (see below)</li>
+    					</ul>
+    				</section>
+    				<section>
+    					<h3>PrimesUI webpage</h3>
+    					<img src="img/puipage.png">
+    				</section>  
+    			</section>
+    			<section>
+    				<section id="step1">
+    					<h2>Step 1: Configure the JMeter recorder</h2>  
+    				</section>
+    				<section>
+    					<h3>Principle</h3>
+    					<p>You will now set up a proxy with JMeter and this proxy will record any action you have on PrimesUI:</p>
+    					<ul>
+    						<li>Click on a link</li>
+    						<li>Reload the page</li>
+    						<li>Download something (css, image, ...)</li>
+    						<li>...</li>
+    					</ul>
+    					<p>You will be able afterward to replay all the recorded actions with VUsers</p>
+    				</section>  
+    				<section>
+    					<h3>Let's get started!</h3>
+    					<p>First, create a "Thread Group" by clicking right on "Test Plan"</p>
+    					<img src="img/threadgroup.png">
+    				</section>  
+    				<section>
+    					<p>Right click to the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</p>
+    					<p>Put the following "http://127.0.0.1:8888/primesui/" on the field "Server Name or IP"</p>
+    					<img src="img/httpdefault.png">
+    				</section>  
+    				<section>
+    					<p>Right click to "Thread Group" and "Add/Logic Controller/Recording Controller"</p>
+    					<img src="img/recordingcontroller.png">
+    					<p>We have now the minimum requirements to record our actions on the stubb website</p>
+    				</section>  
+    				<section>
+    					<p>Then, right click to "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</p>
+    					<p>Configure the port of your proxy (I have chosen 7777 in this case)</p>
+    					<p>Configure the Targt Controller (Test Plan > Thread Group > Recording Controller)</p>
+    					<p>Click on "Add  suggested Excludes"</p>
+    					<p>See screenshot below</p>
+    				</section>  
+    				<section>
+    					<img src="img/scriptrecorder.png">
+    				</section>
+    				<section>
+    					<p>Click on the Start button on the Script Recorder to start the recorder</p>
+    				</section>
+    			</section>
+    			<section>
+    				<section id="step2">
+    					<h2>Step 2: Configure the web browser</h2>  
+    				</section>
+    				<section>
+    					<h3>Principle</h3>
+    					<p>You will now set up your browser to make it communicate with webapges through your JMeter proxy previously set</p>
+    					<p>You will be able afterward to play & record your test scenario</p>
+    					<p>I'll explain this part using Firefox</p>
+    				</section>  
+    				<section>
+    					<h3>Let's get started!</h3>
+    					<p>First, open Firefox and go to "Preference/Advanced/Network"</p>
+    					<p>On the section "Connection", click on "Settings" and set up your proxy (see below)</p>
+    				</section>  
+    				<section>
+    					<img src="img/firefoxconf1.png">
+    				</section>  
+    				<section>
+    					<p>To install the JMeter certificate in Firefox, go to "Preference/Advanced/Certificates", "View certificates" and "Import"</p>
+    					<p><u>Tip</u>: the JMeters's self-signed certificates is in <code>%JMETER_HOME%/bin/</code></p>
+    				</section>      				
+    				<section>
+    					<img src="img/firefoxconf2.png">
+    				</section>
+    			</section>
+    			<section>
+    				<section>
+    					<h3>And now, browse your app</h3>
+    					<p>Good news everyone, your browser is now ready! Simply hit "http://127.0.0.1:8888/primesui/", browse the page, hit several times "http://127.0.0.1:8888/primesui/check", have some fun with urls...</p>
+    				</section>  
+    				<section>
+    					<p>When you have finished to play with the app, return to JMeter and click on the "Stop" button on the recorder</p>
+    					<p>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration and return to step <a href="#/step1">1</a>)</p>
+    					<img src="img/httprequests.png">
+    				</section>
+    			</section>
     		</div>
 
-    		<script src="lib/js/head.min.js"></script>
-    		<script src="js/reveal.js"></script>
+    	</div>
 
-    		<script>
+    	<script src="lib/js/head.min.js"></script>
+    	<script src="js/reveal.js"></script>
 
-    			Reveal.initialize({
+    	<script>
+
+    		Reveal.initialize({
 
         // Display controls in the bottom right corner
         controls: true,
