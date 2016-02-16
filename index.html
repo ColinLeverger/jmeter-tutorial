@@ -143,13 +143,18 @@
     					<p>It is possible to record scenarios: simply browse you website with your web browser configured with JMeter, and replay your recorded scenarions with hundreads of VUSers.</p>
     				</section>
     				<section>
-    					<h3>Reports</h3>
+    					<h3>Reports & listener</h3>
 
     					<ul>
     						<li>Automatic report generation</li>
-    						<li>Add & delete reports parts easily with GUI</li>
+    						<li>Add & delete listeners easily with GUI</li>
+    						<li>One listener = one way to vizualise data from test</li>
+    						<li>With graphs and metrics, it is easier to analyse and understand the possible problems</li>
     					</ul>
 
+    				</section>
+    				<section>
+    					<h4>Possible listener output in JMeter</h4>
     					<img src="img/report.jpg">
     				</section>
     			</section>
@@ -243,7 +248,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</ul>
     				</section>
     				<section>
-    					<h3>PrimesUI webpage</h3>
+    					<h4>PrimesUI webpage</h4>
     					<img src="img/puipage.png">
     				</section>  
     			</section>
@@ -269,28 +274,30 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>  
     				<section>
     					<ul>
-    						<li>Right click to the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</li>
-    						<li>Put the following "http://127.0.0.1:8888/primesui/" on the field "Server Name or IP"</li>
+    						<li>Right click on the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</li>
+    						<li>Put the following "127.0.0.1" on the field "Server Name or IP" and "8888" on the field "Port Number"</li>
     					</ul>
     					<img src="img/httpdefault.png">
     				</section>  
     				<section>
     					<ul>
-    						<li>Right click to "Thread Group" and "Add/Logic Controller/Recording Controller"</li>
-    						<img src="img/recordingcontroller.png">
+    						<li>Right click on "Thread Group" and "Add/Logic Controller/Recording Controller"</li>
+    					</ul>
+	   					<img src="img/recordingcontroller.png">
+    					<ul>
     						<li>We have now the minimum requirements to record our actions on the stubb website</li>
     					</ul>
     				</section>  
     				<section>
     					<ul>
-    						<li>Then, right click to "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</li>
+    						<li>Then, Right click on "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</li>
     						<li>Configure the port of your proxy (I have chosen 7777 in this case)</li>
     						<li>Configure the Targt Controller (Test Plan > Thread Group > Recording Controller)</li>
     						<li>Click on "Add  suggested Excludes"</li>
     					</ul>
-						<p>See screenshot below</p>
     				</section>  
     				<section>
+    					<h4>HTTP(S) Test Script Recorder Configuration (<a href="img/scriptrecorder.png">detailled image</a>)</h4>
     					<img src="img/scriptrecorder.png">
     				</section>
     				<section>
@@ -317,6 +324,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</ul>
     				</section>  
     				<section>
+    					<h4>Configure firefox to use JMeter's proxy</h4>
     					<img src="img/firefoxconf1.png">
     				</section>  
     				<section>
@@ -326,12 +334,13 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</ul>
     				</section>      				
     				<section>
+    					<h4>Install JMeter certificate</h4>
     					<img src="img/firefoxconf2.png">
     				</section>
     			</section>
     			<section>
     				<section>
-    					<h3>And now, browse your app</h3>
+    					<h2>And now, browse your app</h2>
     					<p>Good news everyone, your browser is now ready! Simply hit "http://127.0.0.1:8888/primesui/", browse the page, hit several times "http://127.0.0.1:8888/primesui/check", have some fun with urls...</p>
     				</section>  
     				<section>
@@ -347,7 +356,119 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<h2>Step 3: Replay your recorded test</h2>  
     				</section>
     				<section>
-    					WORK IN PROGRESS
+    					<h3>Principle</h3>
+    					<ul>
+    						<li>You will now replay your recorded test with 5 VUsers</li>
+    					</ul>
+    				</section>  
+    				<section>
+    					<h3>Let's get started!</h3>
+    					<ul>
+    						<li>First, click on "Thread Group" and:</li>
+    							<ol>
+    								<li>Set "Number Of Thread" to 5</li>
+    								<li>Set "Loop Count" to 100</li>
+    							</ol>
+    						<li>When it is done, right click on "Thread Group" and "Add/Listener/View Results in Table"</li>
+    					</ul>
+    					<img src="img/testreplay1.png">
+    				</section>
+    				<section>
+    					<h3>Hit "Start" to play your scenario</h3>
+    					<img src="img/start.png">
+    					<ul>
+    						<li>You can now observe the result of you test with the listeners</li>
+    						<ul>
+    							<li>In real time</li>
+    							<li>At the end of the test</li>
+    						</ul>
+    					</ul>
+    					<p>See screenshot below</p>    					
+    				</section>
+    				<section>
+    					<h4>Listeners output</h4>
+    					<img src="img/listener1.png">			
+    				</section>
+    				<section>
+    					<img src="img/listener2.png">    	
+    				</section>
+    			</section>
+    			<section>
+    				<section id="step3">
+    					<h2>Build test without recorder</h2>  
+    				</section>
+    				<section>
+    					<h3>Principle</h3>
+    					<ul>
+    						<li>You will now build a test from scratch without help from recorder</li>
+    						<li>All the URL you want to test will be configured directly by you</li>
+    					</ul>
+    				</section>  
+    				<section>
+    					<h3>Let's get started, with a new JMeter project!</h3>
+    					<ul>
+    						<li>First, close the actual project</li>
+    						<li>Right click on "Test Plan" and "Add/Threads (Users)/Thread Group"</li>
+    						<li>Right click on the new "Thread Group" and "Add/Config Element/HTTP Request Defaults"</li>
+    						<li>Put the following "127.0.0.1" on the field "Server Name or IP" and "8888" on the field "Port Number"</li>
+    						<li>Add a listener of your choice under "Thread Group"</li>
+    					</ul>
+    				</section>
+    				<section>
+    					<ul>
+    						<li>Right click on "Thread Group" and "Add/Sampler/HTTP Request</li>
+    						<ul>
+    							<li>This will be the first URL of your test</li>
+    							<li>You have to create this URL manually</li>
+    						</ul>
+    						<li>The URL we are interested in is /primesui/check : just put "/primesui/check" in "Path" field</li>
+    						<li><u>Note</u>: The "HTTP Request Defaults" is the default "Server Name" and "Port Number" for every requests under it / on the actual "Thread Group"</li>
+    					</ul>
+    				</section>
+    				<section>
+    					<h4>Manual HTTP Request</h4>
+
+    					<img src="img/manualhttprequest.png">
+    				</section>
+    				<section>
+    					<h3>Configure your VUsers</h4>
+    					<ul>
+    						<li>Click on "Thread Group" and configure:</li>
+    						<ul>
+    							<li>50 Threads (50 VUsers!)</li>
+    							<li>100 Loops</li>
+    						</ul> 
+    					</ul>
+    				</section>
+    				<section>
+    					<h3>Run your test and analyse output!</h4>
+    				</section>
+    				<section>
+    					<h3>Notes</h3>
+    					<ul>
+    						<li>You can create as much "HTTP Request" as you need</li>
+    						<li>The "HTTP Request" are executed sequentially in the order they are on the "Thread Group"</li>
+    						<li>To make the test more realistic, it can be useful to add "Timers" (Right click on "Thread Group", then "Add/Timer"</li>
+    					</ul>
+    				</section>
+    			</section>
+    			<section>
+    				<section id="further">
+    					<h2>Going Further</h2>  
+    				</section>
+    				<section>
+    					<p>WORK IN PROGRESS</p>
+    				</section>
+    			</section>
+    			<section>
+    				<section>
+    					<h2>The end</h2>  
+    					<p>I hope you find this tutorial useful!</p>
+    					<p><a href="#">#TOP</a></p>
+    				</section>
+    				<section>
+    					<p><a href="mailto:colinleverger@gmail.com" target="blank">Any feedback?</a></p>
+    					<p><a href="#">#TOP</a></p>
     				</section>
     			</section>
     		</div>
