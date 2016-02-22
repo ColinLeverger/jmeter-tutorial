@@ -88,7 +88,7 @@
     						<li>Free & Opensource Load Test tool</li>
     						<li>Java app - run on any system with Java</li>
     						<li>GUI</li>
-    						<li>Work with many protocols / lot of plugins for almost everything</li>
+    						<li>Work with many protocols / lots of plugins for almost everything</li>
     						<li>Distributed testing is possible</li>
     						<li>Widely used & approved</li>
     					</ul>
@@ -97,7 +97,7 @@
     					<h3>Cons</h3>
     					<ul>
     						<li>You can only test web app</li>
-    						<li>High consumpsion of memory with GUI (warning: <a href="https://en.wikipedia.org/wiki/Uncertainty_principle">Heisenberg's Uncertainty Principle</a>)</li>
+    						<li>High consumption of memory with GUI (warning: <a href="https://en.wikipedia.org/wiki/Uncertainty_principle">Heisenberg's Uncertainty Principle</a>)</li>
     						<li>Doc is not exhaustive</li>
     						<li>It is sometimes hard to follow too complex scenarios</li>
     					</ul>
@@ -127,7 +127,7 @@
     				<section>
     					<h3>Recorder</h3>
 
-    					<p>It is possible to record scenarios: simply browse you website with your web browser configured with JMeter, and replay your recorded scenarions with hundreads of VUSers.</p>
+    					<p>It is possible to record scenarios: simply browse your website with your web browser configured with JMeter, and replay your recorded scenarios with hundreds of VUSers.</p>
     				</section>
     				<section>
     					<h3>Reports & listener</h3>
@@ -165,11 +165,11 @@
     					<h3>Download links</h3>
 
     					<p>Official website: <a href="http://jmeter.apache.org/download_jmeter.cgi">jmeter.apache.org/download_jmeter.cgi</a></p>
-    					<p>Download the latest binarie in zip / tgz format</p>
+    					<p>Download the latest binary in zip / tgz format</p>
     					<p><a href="http://apache.mirrors.ovh.net/ftp.apache.org/dist//jmeter/binaries/apache-jmeter-2.13.tgz">Direct Link (15 Feb 2016 - Version 2.13)</a></p>
     				</section>
     				<section>
-    					<h3>Exctract & execute</h3>
+    					<h3>Extract & execute</h3>
 
     					<h4>For Linux</h4>
     					<pre><code data-trim>
@@ -182,7 +182,7 @@ user : ~/Sandbox > chmod 755 ./bin/jmeter
 user : ~/Sandbox > ./bin/jmeter  #if you are using JMeter without proxy
 user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</code></pre>
-    					<small><p><u>Note</u>: if your proxy is localhost, just use <code>-H localhost</code> (http://127.0.0.1 & http://localhost wont actually work...)</p></small>
+    					<small><p><u>Note</u>: if your proxy is localhost, just use <code>-H localhost</code> (http://127.0.0.1 & http://localhost won't actually work...)</p></small>
     				</section>
     				<section>
     					<h4>For Windows</h4>
@@ -217,7 +217,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				<section>
     					<h3>About PrimesUI</h3>
     					<ul>
-    						<li>App to test various languages & implementations efficiency</li>
+    						<li>App to test various langages & implementations efficiency</li>
     						<li>Playing with primes</li>
     						<li>GitHub page: <a href="https://github.com/dacr/dock-primesui">here</a></li>
     						<li>Dockerized environnement</li>
@@ -272,14 +272,14 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</ul>
 	   					<img src="img/recordingcontroller.png">
     					<ul>
-    						<li>We have now the minimum requirements to record our actions on the stubb website</li>
+    						<li>We now have the minimum requirements to record our actions on the stub website</li>
     					</ul>
     				</section>  
     				<section>
     					<ul>
-    						<li>Then, Right click on "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</li>
+    						<li>Then, right click on "WorkBench" and "Add/Non-Test Elements/HTTP(S) Test Script Recorder"</li>
     						<li>Configure the port of your proxy (I have chosen 7777 in this case)</li>
-    						<li>Configure the Targt Controller (Test Plan > Thread Group > Recording Controller)</li>
+    						<li>Configure the Target Controller (Test Plan > Thread Group > Recording Controller)</li>
     						<li>Click on "Add  suggested Excludes"</li>
     					</ul>
     				</section>  
@@ -298,7 +298,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				<section>
     					<h3>Principle</h3>
     					<ul>
-    						<li>You will now setup your browser to make it communicate with webapges through your JMeter proxy previously set</li>
+    						<li>You will now setup your browser to make it communicate with webpages through your JMeter proxy previously set</li>
     						<li>You will be able afterward to play & record your test scenario</li>
     						<li>Browser used for this part: Firefox</li>
     					</ul>
@@ -311,7 +311,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					</ul>
     				</section>  
     				<section>
-    					<h4>Configure firefox to use JMeter's proxy</h4>
+    					<h4>Configure Firefox to use JMeter's proxy</h4>
     					<img src="img/firefoxconf1.png">
     				</section>  
     				<section>
@@ -332,7 +332,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>  
     				<section>
     					<ul>
-    						<li>When you have finished to play with the app, return to JMeter and click on the "Stop" button on the recorder</li>
+    						<li>When you have finished playing with the app, return to JMeter and click on the "Stop" button on the recorder</li>
     						<li>You should see that there is some newly recorded http requests under the "Recording Controller" (if not, please check your configuration / return to step <a href="#/step2">2</a>)</li>
     					</ul>
     					<img src="img/httprequests.png">
@@ -364,7 +364,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     					<h3>Hit "Start" to play your scenario</h3>
     					<img src="img/start.png">
     					<ul>
-    						<li>You can now observe the result of you test with the listeners</li>
+    						<li>You can now observe the result of your test with the listeners</li>
     						<ul>
     							<li>In real time</li>
     							<li>At the end of the test</li>
@@ -388,7 +388,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				<section>
     					<h3>Principle</h3>
     					<ul>
-    						<li>You will now build a test from scratch without help from recorder</li>
+    						<li>You will now build a test from scratch without help from the recorder</li>
     						<li>All the URL you want to test will be configured directly by you</li>
     					</ul>
     				</section>  
@@ -410,7 +410,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     							<li>You have to create this URL manually</li>
     						</ul>
     						<li>The URL we are interested in is /primesui/check : just put "/primesui/check" in "Path" field</li>
-    						<li><u>Note</u>: The "HTTP Request Defaults" is the default "Server Name" and "Port Number" for every requests under it / on the actual "Thread Group"</li>
+    						<li><u>Note</u>: The "HTTP Request Defaults" is the default "Server Name" and "Port Number" for every request under it / on the actual "Thread Group"</li>
     					</ul>
     				</section>
     				<section>
@@ -430,7 +430,7 @@ user : ~/Sandbox > ./bin/jmeter -H proxy-addr -P proxy-port #with proxy
     				</section>
     				<section>
     					<h3>Run your test and analyse output!</h4>
-                        <p>In this configuration, each VUsers will basically hit /primesui/check a hundread times!</p>
+                        <p>In this configuration, each VUsers will basically hit /primesui/check a hundred times!</p>
     				</section>
     				<section>
     					<h3>Notes</h3>
